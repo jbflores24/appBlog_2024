@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Lista de Usuarios</h3>
+    </div>
+  </div>
+  <div class="row mt-2 caja">
+    <div class="col-sm-12">
+      <table id="tblUsuarios" class="display" style="width: 100%">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Rol</th>
+            <th>Fecha de Creación</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.rol.nombre}}</td>
+            <td>2020-12-15</td>
+            <td>
+              <a href="editar_usuario.php" class="btn btn-warning"
+                ><i class="bi bi-pencil-fill"></i
+              ></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

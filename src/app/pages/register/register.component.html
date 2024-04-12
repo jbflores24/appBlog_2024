@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <h1 class="text-center">Registro de Usuarios</h1>
+  <div class="row">
+      <div class="col-sm-6 offset-3">
+          <div class="card">
+             <div class="card-header">
+                  Regístrate para poder comentar
+             </div>
+              <div class="card-body">
+              <form #formulario="ngForm" (ngSubmit)="procesa()">
+
+              <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre:</label>
+                  <input [(ngModel)]="user.name" type="text" class="form-control" name="nombre" placeholder="Ingresa el nombre" required autofocus>
+              </div>
+
+              <div class="mb-3">
+                  <label for="email" class="form-label">Email:</label>
+                  <input [(ngModel)]="user.email" type="email" class="form-control" name="email" placeholder="Ingresa el email" required autofocus>
+              </div>
+
+              <div class="mb-3">
+                  <label for="password" class="form-label">Password:</label>
+                  <input [(ngModel)]="user.password" type="password" class="form-control" name="password" placeholder="Ingresa el password" required autofocus>
+              </div>
+
+              <div class="mb-3">
+                  <label for="confirmarPassword" class="form-label">Confirmar password:</label>
+                  <input [(ngModel)]="confirmar_password" type="password" class="form-control" name="confirmar_password" placeholder="Ingresa la confirmación del password" required autofocus>
+              </div>
+
+              <br />
+              <button [disabled]="formulario.invalid" type="submit" name="registrarse" class="btn btn-primary w-100"><i class="bi bi-person-bounding-box"></i> Registrarse</button>
+              </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</div>

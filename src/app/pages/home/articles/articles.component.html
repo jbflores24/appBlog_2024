@@ -1,0 +1,18 @@
+<div class="container-fluid my-5">
+  <h1 class="text-center">Artículos</h1>
+  <div class="row">
+      <div class="col-sm-4 mt-4" *ngFor="let article of articles">
+          <div class="card">
+              <img src="assets/img/articulos/{{ article.imagen }}" class="card-img-top" alt="{{ article.imagen }}">
+              <div class="card-body">
+                  <h5 class="card-title">{{ article.titulo }}</h5>
+                  <p><strong>{{ article.created_at }}</strong></p>
+                  <p class="card-text">{{ article.texto }}</p>
+                  <a href="detalle.php" class="btn btn-primary">Ver más</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
