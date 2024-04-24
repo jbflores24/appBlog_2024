@@ -1,0 +1,44 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Lista de Artículos</h3>
+    </div>
+    <div class="col-sm-4 offset-2">
+      <a href="crear_articulo.php" class="btn btn-success w-100"
+        ><i class="bi bi-plus-circle-fill"></i> Nuevo Artículo</a
+      >
+    </div>
+  </div>
+  <div class="row mt-2 caja">
+    <div class="col-sm-12">
+      <table id="tblArticulos" class="display" style="width: 100%">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Imagen</th>
+            <th>Texto</th>
+            <th>Fecha de creación</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let articulo of articulos">
+            <td>{{ articulo.id }}</td>
+            <td>{{ articulo.titulo }}</td>
+            <td>
+              <img src="http://localhost:8000/uploads/{{articulo.imagen}}" style="width: 180px" />
+            </td>
+            <td>{{ articulo.texto }}</td>
+            <td>{{ articulo.created_at }}</td>
+            <td>
+              <a href="editar_articulo.php" class="btn btn-warning"
+                ><i class="bi bi-pencil-fill"></i
+              ></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -6,7 +6,7 @@
   </div>
   <div class="row mt-2 caja">
     <div class="col-sm-12">
-      <table id="tblUsuarios" class="display" style="width: 100%">
+      <table class="table table-striped">
         <thead>
           <tr>
             <th>ID</th>
@@ -25,9 +25,8 @@
             <td>{{ user.rol.nombre}}</td>
             <td>2020-12-15</td>
             <td>
-              <a href="editar_usuario.php" class="btn btn-warning"
-                ><i class="bi bi-pencil-fill"></i
-              ></a>
+              <a (click) = gestion(user.id) class="btn btn-warning"
+                ><i class="bi bi-pencil-fill"></i></a>
             </td>
           </tr>
         </tbody>

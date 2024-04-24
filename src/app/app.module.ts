@@ -13,6 +13,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './pages/users/users.component';
+import { GestionUserComponent } from './pages/users/gestion-user/gestion-user.component';
+import { ArticulosComponent } from './pages/articulos/articulos.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { UsersComponent } from './pages/users/users.component';
     RegisterComponent,
     LoginComponent,
     UsersComponent,
+    GestionUserComponent,
+    ArticulosComponent,
 
   ],
   imports: [
