@@ -1,0 +1,85 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 *ngIf="!op" class="text-center">Editar Artículo</h3>
+      <h3 *ngIf="op" class="text-center">Agregar Artículo</h3>
+    </div>
+  </div>
+  <div class="row py-4">
+    <div class="col-sm-6 offset-3">
+      <form #f = "ngForm" enctype="multipart/form-data">
+        <input type="hidden" name="id" [(ngModel)]="article.id" />
+
+        <div class="mb-3">
+          <label for="titulo" class="form-label">Título:</label>
+          <input
+            [(ngModel)]="article.titulo"
+            type="text"
+            class="form-control"
+            name="titulo"
+            id="titulo"
+            placeholder="Escriba el título del artículo"
+          />
+        </div>
+
+        <div *ngIf="!op" class="mb-3">
+          <img
+            class="img-fluid img-thumbnail"
+            src="http://localhost:8000{{article.imagen}}"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="imagen" class="form-label">Imagen:</label>
+          <input
+            type="file"
+            class="form-control"
+            name="imagen"
+            id="imagen"
+            [(ngModel)]="article.imagen"
+            (change) = "cargarImagen($event)"
+            placeholder="Selecciona una imagen"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="texto">Texto</label>
+          <textarea
+            [(ngModel)]="article.texto"
+            class="form-control"
+            placeholder="Escriba el texto de su artículo"
+            name="texto"
+            style="height: 200px"
+          ></textarea
+          >
+        </div>
+
+        <br />
+        <button
+          *ngIf = "!op"
+          (click) = "editar(article.id)"
+          name="editarArticulo"
+          class="btn btn-success float-left"
+        >
+          <i class="bi bi-person-bounding-box"></i> Editar Artículo
+        </button>
+
+        <button
+          *ngIf = "!op"
+          type="submit"
+          name="borrarArticulo"
+          class="btn btn-danger float-right"
+        >
+        <i class="bi bi-person-bounding-box"></i> Borrar Artículo
+        </button>
+        <button
+          *ngIf = "op"
+          (click) = "agregar()"
+          name="agregarArticulo"
+          class="btn btn-success float-left"
+          >
+          <i class="bi bi-person-bounding-box"></i> Agregar Artículo
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

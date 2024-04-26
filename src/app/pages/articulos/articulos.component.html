@@ -4,7 +4,7 @@
       <h3>Lista de Artículos</h3>
     </div>
     <div class="col-sm-4 offset-2">
-      <a href="crear_articulo.php" class="btn btn-success w-100"
+      <a (click)="agregar()" class="btn btn-success w-100"
         ><i class="bi bi-plus-circle-fill"></i> Nuevo Artículo</a
       >
     </div>
@@ -27,12 +27,12 @@
             <td>{{ articulo.id }}</td>
             <td>{{ articulo.titulo }}</td>
             <td>
-              <img src="http://localhost:8000/uploads/{{articulo.imagen}}" style="width: 180px" />
+              <img src="http://localhost:8000{{articulo.imagen}}" style="width: 180px" />
             </td>
             <td>{{ articulo.texto }}</td>
             <td>{{ articulo.created_at }}</td>
             <td>
-              <a href="editar_articulo.php" class="btn btn-warning"
+              <a (click)="editar(articulo.id)" class="btn btn-warning"
                 ><i class="bi bi-pencil-fill"></i
               ></a>
             </td>

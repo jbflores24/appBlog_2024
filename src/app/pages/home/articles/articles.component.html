@@ -3,7 +3,7 @@
   <div class="row">
       <div class="col-sm-4 mt-4" *ngFor="let article of articles">
           <div class="card">
-              <img src="http://localhost:8000/uploads/{{ article.imagen }}" class="card-img-top" alt="{{ article.imagen }}">
+              <img src="http://localhost:8000{{ article.imagen }}" class="card-img-top" alt="{{ article.imagen }}">
               <div class="card-body">
                   <h5 class="card-title">{{ article.titulo }}</h5>
                   <p><strong>{{ article.created_at }}</strong></p>

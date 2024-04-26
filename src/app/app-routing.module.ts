@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { UsersComponent } from './pages/users/users.component';
 import { GestionUserComponent } from './pages/users/gestion-user/gestion-user.component';
 import { ArticulosComponent } from './pages/articulos/articulos.component';
+import { GestionArticuloComponent } from './pages/articulos/gestion-articulo/gestion-articulo.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'articulos',
     component : ArticulosComponent
+  },
+  {
+    path: 'gestionArticulo/:id',
+    component : GestionArticuloComponent
   },
   {
     path:'',

@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './pages/users/users.component';
 import { GestionUserComponent } from './pages/users/gestion-user/gestion-user.component';
 import { ArticulosComponent } from './pages/articulos/articulos.component';
+import { GestionArticuloComponent } from './pages/articulos/gestion-articulo/gestion-articulo.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ArticulosComponent } from './pages/articulos/articulos.component';
     UsersComponent,
     GestionUserComponent,
     ArticulosComponent,
+    GestionArticuloComponent,
 
   ],
   imports: [
